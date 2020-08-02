@@ -10,15 +10,6 @@ class Car {
     }
 
     /*
-   * Добавь статический метод `getSpecs(car)`,
-   * который принимает объект-машину как параметр и выводит
-   * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
-   */
-    static getSpecs(car) {
-        console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car._price}`);
-    }
-
-    /*
    * Добавь геттер и сеттер для свойства price,
    * который будет работать с свойством цены автомобиля.
    */
@@ -78,6 +69,15 @@ class Car {
         this.distance += hours * this.speed;
        }
    }
+
+    /*
+   * Добавь статический метод `getSpecs(car)`,
+   * который принимает объект-машину как параметр и выводит
+   * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
+   */
+  static getSpecs(car) {
+    console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car._price}`);
+}
 }
 
 const mustang = new Car({ maxSpeed: 200, price: 2000 });
